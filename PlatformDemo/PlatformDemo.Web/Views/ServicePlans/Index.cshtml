@@ -1,0 +1,23 @@
+﻿@model IEnumerable<dynamic>
+
+<h2>Service Plans</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Service Plan ID</th>
+            <th>Date of Purchase</th>
+            <th>Timesheets Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var plan in Model)
+        {
+            <tr>
+                <td>@plan.ServicePlanId</td>
+                <td>@plan.DateOfPurchase</td>
+                <td>@plan.TimesheetsCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
